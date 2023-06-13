@@ -49,6 +49,10 @@ client.getEntries({ content_type: 'favouriteArtists' }).then(function (entries) 
         description.innerHTML = entry.fields.description;
         item.append(description);
 
+        var rating = document.createElement("p");
+        rating.innerHTML = entry.fields.rating;
+        item.append(rating);
+
         if (entry.fields.portfolioHighlight) {
             console.log(entry.fields.portfolioHighlight.fields.file.url);
             var coverImage = document.createElement("img")
