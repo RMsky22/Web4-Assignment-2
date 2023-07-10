@@ -15,10 +15,16 @@ var client = contentful.createClient({
 client.getEntry(id).then(function (entry) {
     console.log(entry);
 
- 
     //creating an H1 element
-    var heading = document.createElement('h1');
+    var heading = document.createElement('h2');
     heading.innerHTML = entry.fields.title;
+
+    //creating a paragraph element for description
+    var description = document.createElement('p');
+    description.innerHTML = entry.fields.description;
+    console.log(description);
+    var coverImage = document.createElement('img')
+    coverImage.src = entry.fields.portfolioHighlight.fields.file.url;
 
     //creating a gallery div
     var gallery = document.createElement("div");
@@ -31,8 +37,8 @@ client.getEntry(id).then(function (entry) {
         gallery.append(reelImg);
     });
 
-
-
+    document.getElementById("page-title").append(heading);
+    document.getElementById("place-for-content-details-page").append(coverImage);
+    document.getElementById("place-for-content-details-page").append(description);
     document.getElementById("gallery").append(gallery);
-    document.getElementById("place-for-content-details-page").append(heading);
 });
