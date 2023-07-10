@@ -20,7 +20,7 @@ client.getEntries({ content_type: 'favouriteArtists' }).then(function (entries) 
 
     console.log(entries);
 
-   //loop through each entry, call it 'entry   
+    //loop through each entry, call it 'entry   
     entries.items.forEach(function (entry) {
         //log the title for all the entries that have it 
         // console.log(entries);
@@ -42,7 +42,7 @@ client.getEntries({ content_type: 'favouriteArtists' }).then(function (entries) 
         var description = document.createElement("p");
         description.innerHTML = entry.fields.description;
         item.append(description);
-        
+
         var getDetails = document.createElement("a");
         getDetails.innerHTML = "more info ";
         getDetails.href = "details.html?id=" + entry.sys.id;
@@ -55,14 +55,14 @@ client.getEntries({ content_type: 'favouriteArtists' }).then(function (entries) 
             coverImage.classList.add('cover-image')
             item.append(coverImage);
         }
-       
+
         document.getElementById("container").append(item);
         //structure will always be entry.field.nameoffield
         console.log("title: " + entry.fields.title);
-        console.log("description : " + entry.fields.description);      
-    }); 
+        console.log("description : " + entry.fields.description);
+    });
 
-  
+
 });
 
 

@@ -5,13 +5,15 @@ body {
     margin: 0;
     padding: 0;
     color: rgb(82, 82, 82);
+
+   
 }
 
-#place-for-content {
+#container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
     grid-auto-rows: minmax(380px, 1fr);
-  
+
     gap: 5px;
     margin-top: 2em;
     margin-bottom: 1.75em;
@@ -27,9 +29,9 @@ body {
     margin: 5px;
     border-radius: 25px;
     background-color: white;
-    min-height: 300px;
+   
     border: 1px solid black;
-    
+
 }
 
 h1 {
@@ -44,6 +46,7 @@ h2 {
     font-size: 2.5rem;
     font-weight: 600;
     padding: 15px;
+   
 }
 
 h3 {
@@ -60,9 +63,9 @@ p {
 
 }
 
-a{
-   text-decoration: none;
-   color: rgb(82, 82, 82);
+a {
+    text-decoration: none;
+    color: rgb(82, 82, 82);
 }
 
 img {
@@ -71,7 +74,7 @@ img {
     height: auto;
     border-radius: 1.5em;
     margin-top: 15px;
-    
+
     object-fit: contain;
     overflow: hidden;
 }
@@ -138,15 +141,17 @@ img:hover {
     justify-content: left;
     align-items: center;
 }
+
 .footer .container-sm .logo {
     text-align: left;
     margin-bottom: 25px;
-    
+
 }
+
 .footer .container-sm .links {
     display: flex;
     flex-direction: column;
-   
+
     gap: .75em;
     font-size: .75em;
 }
