@@ -121,32 +121,17 @@ img {
     border-radius: 0rem 0rem 1.2rem 0rem;
 }
 
+#gallery div {
+   display: flex;
+   flex-direction: row;
+   
+   gap: .75em;
+}
+#gallery div img {
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
+}
 
 /* ------------------------------------------------ */
-
-img:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: all 0.3s;
-
-}
-
-.footer .container-sm {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-}
-.footer .container-sm .logo {
-    text-align: left;
-    margin-bottom: 25px;
-    
-}
-.footer .container-sm .links {
-    display: flex;
-    flex-direction: column;
-   
-    gap: .75em;
-    font-size: .75em;
-}

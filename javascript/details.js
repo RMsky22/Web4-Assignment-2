@@ -40,5 +40,5 @@ client.getEntry(id).then(function (entry) {
     document.getElementById("page-title").append(heading);
     document.getElementById("place-for-content-details-page").append(coverImage);
     document.getElementById("place-for-content-details-page").append(description);
-    document.getElementById("gallery").append(gallery);
+     document.getElementById("gallery").append(gallery);
 });

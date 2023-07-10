@@ -20,7 +20,7 @@ client.getEntries({ content_type: 'favouriteArtists' }).then(function (entries) 
 
     console.log(entries);
 
-    //loop through each entry, call it 'entry   
+   //loop through each entry, call it 'entry   
     entries.items.forEach(function (entry) {
         //log the title for all the entries that have it 
         // console.log(entries);
@@ -42,6 +42,11 @@ client.getEntries({ content_type: 'favouriteArtists' }).then(function (entries) 
         var description = document.createElement("p");
         description.innerHTML = entry.fields.description;
         item.append(description);
+        
+        var getDetails = document.createElement("a");
+        getDetails.innerHTML = "more info ";
+        getDetails.href = "details.html?id=" + entry.sys.id;
+        item.append(getDetails);
 
         if (entry.fields.portfolioHighlight) {
             console.log(entry.fields.portfolioHighlight.fields.file.url);
@@ -50,23 +55,14 @@ client.getEntries({ content_type: 'favouriteArtists' }).then(function (entries) 
             coverImage.classList.add('cover-image')
             item.append(coverImage);
         }
-
-        if (entry.fields.featured == true) {
-            document.getElementById("place-for-hero").append(item);
-
-        } else if (entry.fields.category == "")
-
-            var getDetails = document.createElement("a");
-        getDetails.innerHTML = "get details";
-        getDetails.href = "details.html?id=" + entry.sys.id;
-        item.append(getDetails);
-
-        document.getElementById("place-for-content").append(item);
+       
+        document.getElementById("container").append(item);
         //structure will always be entry.field.nameoffield
         console.log("title: " + entry.fields.title);
         console.log("description : " + entry.fields.description);      
-    });
+    }); 
 
+  
 });
 
 
